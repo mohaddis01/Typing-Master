@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeMaster | Typing Speed Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Type Master</h1>
+            <p>Test your typing speed and accuracy</p>
+        </header>
+
+        <div class="stats-container">
+            <div class="stat-box">
+                <div class="stat-value" id="wpm">0</div>
+                <div class="stat-label">WPM</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="accuracy">0</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="time">60</div>
+                <div class="stat-label">Seconds</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-value" id="characters">0</div>
+                <div class="stat-label">Characters</div>
+            </div>
+        </div>
+
+        <div class="test-container">
+            <div class="quote-display" id="quote-display"></div>
+            <textarea id="quote-input" class="quote-input" placeholder="Click here to start the test..." autofocus></textarea>
+        </div>
+
+        <div class="controls">
+            <button id="start-test" class="btn">Start Test</button>
+            <button id="reset-test" class="btn btn-secondary">Reset</button>
+            <div class="difficulty">
+                <label for="difficulty-select">Difficulty:</label>
+                <select id="difficulty-select">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="duration">
+                <label for="duration-select">Duration:</label>
+                <select id="duration-select">
+                    <option value="30">30 seconds</option>
+                    <option value="60" selected>60 seconds</option>
+                    <option value="120">2 minutes</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results hidden" id="results">
+            <h2>Test Results</h2>
+            <div class="result-stats">
+                <div class="result-box">
+                    <div class="result-value" id="final-wpm">0</div>
+                    <div class="result-label">Words Per Minute</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-value" id="final-accuracy">0%</div>
+                    <div class="result-label">Accuracy</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-value" id="final-characters">0</div>
+                    <div class="result-label">Characters</div>
+                </div>
+                <div class="result-box">
+                    <div class="result-value" id="final-errors">0</div>
+                    <div class="result-label">Errors</div>
+                </div>
+            </div>
+            <button id="new-test" class="btn">New Test</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>© <span id="year"></span> TypeMaster. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
